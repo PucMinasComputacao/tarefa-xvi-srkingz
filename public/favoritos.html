@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Favoritos</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <div>
+        <h1>Meus Favoritos</h1>
+        <p>Itens salvos pelo usuario logado</p>
+      </div>
+
+      <div id="areaLogin" class="area-login"></div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container nav-content">
+      <a href="./index.html">Home</a>
+      <a href="./favoritos.html">Meus Favoritos</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Noticias favoritas</h2>
+      <p>Aqui aparecem apenas os itens favoritados pelo usuario atual.</p>
+    </section>
+
+    <section id="listaFavoritos" class="cards"></section>
+  </main>
+
+  <script src="./favoritos.js"></script>
+</body>
+</html>

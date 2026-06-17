@@ -1,13 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Noticias</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+
+  <header>
+    <div class="container header-content">
+      <div>
+        <h1>Portal de Noticias</h1>
+        <p>CRUD completo com JSON Server, API Fetch e favoritos personalizados</p>
+      </div>
+
+      <div id="areaLogin" class="area-login"></div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container nav-content">
+      <a href="./index.html">Home</a>
+      <a href="./favoritos.html">Meus Favoritos</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Noticias disponiveis</h2>
+      <p>Cadastre, edite, exclua e favorite noticias consumidas pela API REST do JSON Server.</p>
+    </section>
+
+    <section class="painel-formulario">
+      <div class="section-title">
+        <h2 id="tituloFormulario">Cadastrar noticia</h2>
+        <p>Preencha os campos abaixo para criar ou atualizar uma noticia.</p>
+      </div>
+
+      <form id="formPost" class="form-post">
+        <input type="hidden" id="postId">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" placeholder="Digite o titulo da noticia" required>
+          </div>
+
+          <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <input type="text" id="categoria" placeholder="Ex: Tecnologia" required>
+          </div>
+
+          <div class="form-group">
+            <label for="autor">Autor</label>
+            <input type="text" id="autor" placeholder="Nome do autor" required>
+          </div>
+
+          <div class="form-group">
+            <label for="data">Data</label>
+            <input type="date" id="data" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="descricao">Resumo</label>
+          <textarea id="descricao" rows="3" placeholder="Resumo exibido no card da noticia" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="conteudo">Conteudo completo</label>
+          <textarea id="conteudo" rows="5" placeholder="Texto completo exibido na pagina de detalhes" required></textarea>
+        </div>
+
+        <p id="mensagemForm" class="mensagem-form" aria-live="polite"></p>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" id="btnSalvar">Cadastrar</button>
+          <button type="button" class="btn-secondary" id="btnCancelar">Cancelar edicao</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section-title">
+      <h2>Lista de noticias</h2>
+      <p>Dados carregados dinamicamente via metodo GET.</p>
+    </section>
+
+    <section id="listaPosts" class="cards"></section>
+  </main>
+
+  <script src="./app.js"></script>
 </body>
 </html>

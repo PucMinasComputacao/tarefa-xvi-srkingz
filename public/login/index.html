@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login de Usuario</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <main class="login-page">
+    <section class="login-box">
+      <h1>Entrar</h1>
+      <p>Faca login para acessar o site e favoritar itens.</p>
+
+      <form id="formLogin">
+        <label for="login">Login</label>
+        <input type="text" id="login" placeholder="Digite seu login" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p id="mensagemErro" class="erro"></p>
+
+      <div class="dados-teste">
+        <p><strong>Usuarios de teste:</strong></p>
+        <p>Login: admin | Senha: 123</p>
+        <p>Login: user | Senha: 123</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const API_USUARIOS = "http://localhost:3000/usuarios";
+
+    const formLogin = document.getElementById("formLogin");
+    const mensagemErro = document.getElementById("mensagemErro");
+
+    formLogin.addEventListener("submit", async function(evento) {
+      evento.preventDefault();
+
+      const loginDigitado = document.getElementById("login").value;
+      const senhaDigitada = document.getElementById("senha").value;
+
+      try {
+        const resposta = await fetch(API_USUARIOS);
+        const usuarios = await resposta.json();
+
+        const usuarioEncontrado = usuarios.find(usuario => {
+          return usuario.login === loginDigitado && usuario.senha === senhaDigitada;
+        });
+
+        if (usuarioEncontrado) {
+          const usuarioCorrente = {
+            id: usuarioEncontrado.id,
+            nome: usuarioEncontrado.nome,
+            login: usuarioEncontrado.login,
+            email: usuarioEncontrado.email
+          };
+
+          sessionStorage.setItem("usuarioCorrente", JSON.stringify(usuarioCorrente));
+          window.location.href = "../index.html";
+        } else {
+          mensagemErro.textContent = "Login ou senha incorretos.";
+        }
+      } catch (erro) {
+        mensagemErro.textContent = "Erro ao conectar com o servidor.";
+        console.error(erro);
+      }
+    });
+  </script>
+
+</body>
+</html>

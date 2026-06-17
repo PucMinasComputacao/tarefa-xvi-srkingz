@@ -1,0 +1,13 @@
+{
+  "name": "tarefa-xvi-srkingz",
+  "version": "1.0.0",
+  "description": "Portal de noticias com CRUD completo usando JSON Server e API Fetch.",
+  "private": true,
+  "scripts": {
+    "start": "json-server db/db.json --port 3000 --static ./public",
+    "server": "json-server db/db.json --port 3000 --static ./public"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}

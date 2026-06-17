@@ -1,38 +1,72 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ymR3EXUy)
-# Trabalho Prático - Semana 16
+# Trabalho Pratico - Semana 16
 
-Back end com CRUD no JSONServer
-Nesta atividade, você irá evoluir o projeto anterior, utilizando o servidor backend simulado com o JSON Server para fornecer a APIs RESTful a partir de um arquivo db.json. O objetivo é prover funcionalidade para que o usuário da nossa aplicação possa fazer o cadastro e alterações de dados para a entidade principal do nosso projeto, o que é conhecido como CRUD (Create, Read, Update e Delete).
+Back end com CRUD no JSON Server.
 
-Ao final, você deverá atualizar o README.md, incluindo:
+O projeto evolui o Portal de Noticias para consumir uma API REST simulada com JSON Server. A entidade principal e `posts`, permitindo cadastrar, listar, visualizar detalhes, editar e excluir noticias com a API Fetch.
 
-Prints da página inicial e da página de detalhes.
-Estrutura de dados utilizada no arquivo db.json.
- 
+## Como executar
 
-Habilidades a Serem Trabalhadas
-Montagem de ambiente de desenvolvimento com Node.js e JSON Server.
-Implementação completa do ciclo CRUD com JavaScript e API Fetch.
-Manipulação de APIs RESTful com métodos GET, POST, PUT e DELETE.
-Testes de APIs com ferramentas de produtividade
-Validação de formulários no front-end.
-Separação de responsabilidades entre front-end e back-end.
-Organização de projetos web profissionais.
-Atualização dinâmica da DOM.
-Uso das ferramentas do desenvolvedor do navegador (DevTools / Network).
-Controle de versionamento avançado com Git (commits organizados e tags).
- 
+```bash
+npm install
+npm start
+```
 
-## Informações Gerais
+Depois acesse:
 
-- Nome:
-- Matricula:
+```text
+http://localhost:3000
+```
+
+## Funcionalidades implementadas
+
+- Listagem de noticias com requisicao `GET /posts`.
+- Pagina de detalhes com parametro `?id=` e requisicao `GET /posts/:id`.
+- Cadastro de noticia com formulario e requisicao `POST /posts`.
+- Edicao de noticia com formulario preenchido e requisicao `PUT /posts/:id`.
+- Exclusao de noticia com confirmacao e requisicao `DELETE /posts/:id`.
+- Validacao dos campos obrigatorios no front-end.
+- Login simples consumindo `GET /usuarios`.
+- Favoritos por usuario usando `localStorage`.
+
+## Estrutura de dados
+
+O arquivo de dados fica em `db/db.json` e possui duas colecoes:
+
+```json
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Administrador",
+      "login": "admin",
+      "senha": "123",
+      "email": "admin@email.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "titulo": "Noticia sobre Inteligencia Artificial",
+      "categoria": "Tecnologia",
+      "autor": "Isaque Paiva",
+      "data": "2026-06-01",
+      "descricao": "Resumo exibido no card da noticia.",
+      "conteudo": "Texto completo exibido na pagina de detalhes."
+    }
+  ]
+}
+```
+
+## Informacoes Gerais
+
+- Nome: Isaque Paiva
+- Matricula: 916385
 
 ## Prints do trabalho
 
-<<  COLOQUE A IMAGEM - TELA DE CARDS DE PRODUTOS - AQUI >>
+<< COLOQUE A IMAGEM - PAGINA INICIAL COM CARDS E FORMULARIO CRUD - AQUI >>
 
-<<  COLOQUE A IMAGEM - TELA DE DETALHE DO PRODUTO - AQUI >>
+<< COLOQUE A IMAGEM - PAGINA DE DETALHES DA NOTICIA - AQUI >>
 
-<<  COLOQUE A IMAGEM - TELA DO CONSOLE - AQUI >>
-
+<< COLOQUE A IMAGEM - DEVTOOLS NETWORK COM GET/POST/PUT/DELETE - AQUI >>

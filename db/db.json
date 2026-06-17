@@ -1,0 +1,74 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Administrador",
+      "login": "admin",
+      "senha": "123",
+      "email": "admin@email.com"
+    },
+    {
+      "id": "2",
+      "nome": "Usuario Teste",
+      "login": "user",
+      "senha": "123",
+      "email": "user@email.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "titulo": "Noticia sobre Inteligencia Artificial",
+      "categoria": "Tecnologia",
+      "autor": "Isaque Paiva",
+      "data": "2026-06-01",
+      "descricao": "Avancos recentes em sistemas de inteligencia artificial transformam a rotina de empresas e usuarios.",
+      "conteudo": "Sistemas de inteligencia artificial estao cada vez mais presentes em ferramentas de estudo, trabalho e comunicacao. A noticia destaca como essas tecnologias podem automatizar tarefas repetitivas, apoiar a tomada de decisao e criar novas oportunidades no mercado digital."
+    },
+    {
+      "id": "2",
+      "titulo": "Campeonato brasileiro tem rodada decisiva",
+      "categoria": "Esportes",
+      "autor": "Redacao Esportiva",
+      "data": "2026-06-03",
+      "descricao": "Times disputam posicoes importantes na tabela em uma rodada marcada por jogos equilibrados.",
+      "conteudo": "A rodada do campeonato brasileiro promete fortes emocoes. Clubes que brigam pela lideranca tentam manter a regularidade, enquanto equipes da parte inferior da tabela buscam pontos importantes para se afastar da zona de rebaixamento."
+    },
+    {
+      "id": "3",
+      "titulo": "Novo filme estreia nos cinemas",
+      "categoria": "Entretenimento",
+      "autor": "Portal Cultural",
+      "data": "2026-06-05",
+      "descricao": "Producao nacional chega as salas de cinema nesta semana com boa expectativa de publico.",
+      "conteudo": "A estreia movimenta o circuito cultural e chama atencao por valorizar historias brasileiras. O filme mistura drama e humor, trazendo personagens proximos da realidade do publico e uma producao visual bem cuidada."
+    },
+    {
+      "id": "4",
+      "titulo": "Mercado financeiro fecha em alta",
+      "categoria": "Economia",
+      "autor": "Equipe Economia",
+      "data": "2026-06-07",
+      "descricao": "Bolsa registra crescimento apos divulgacao de novos dados economicos.",
+      "conteudo": "O mercado financeiro encerrou o dia em alta, impulsionado por indicadores positivos e pela expectativa de estabilidade nos proximos meses. Analistas apontam que o resultado reflete maior confianca dos investidores."
+    },
+    {
+      "id": "5",
+      "titulo": "Nova linguagem de programacao ganha destaque",
+      "categoria": "Tecnologia",
+      "autor": "Tech News",
+      "data": "2026-06-09",
+      "descricao": "Desenvolvedores comecam a adotar novas ferramentas para melhorar produtividade.",
+      "conteudo": "Uma nova linguagem de programacao vem chamando atencao por sua sintaxe simples e bom desempenho. Comunidades de desenvolvimento ja criam bibliotecas, tutoriais e projetos para testar seu potencial em aplicacoes web."
+    },
+    {
+      "id": "6",
+      "titulo": "Festival cultural movimenta a cidade",
+      "categoria": "Cultura",
+      "autor": "Agenda Local",
+      "data": "2026-06-11",
+      "descricao": "Evento reune musica, arte e gastronomia em varios pontos da cidade.",
+      "conteudo": "O festival cultural promove apresentacoes musicais, exposicoes de arte e feiras gastronomicas. A programacao gratuita atrai familias, estudantes e artistas locais, fortalecendo a economia criativa da regiao."
+    }
+  ]
+}
